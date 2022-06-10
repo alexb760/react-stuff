@@ -1,6 +1,41 @@
 import { useState } from "react";
+import style from "styled-components";
+
 import Button from "../../UI/Button/Button";
 import "./CourseInput.css";
+
+/* Define a Form Control div to set all de css style to the form imput */
+/* Remenber to remove css selectors and replace sudo-selectors with & simbol */
+/* Passing props: */
+/* We can pass props to our stylish component as a regular react component. */
+/* Using pros: */
+/* we can use props inside the component by ceclarin a cursor point. */
+const FormControl = style.div`
+  margin: 0.5rem 0;
+
+& label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: ${(props) => (props.isValid ? "red" : "black")}
+}
+
+& input {
+  display: block;
+  width: 100%;
+  border: 1px solid ${(props) => (props.isValid ? "red" : "#ccc")};
+  font: inherit;
+  line-height: 1.5rem;
+  padding: 0 0.25rem;
+  background: ${(props) => (props.isValid ? "#e65b56" : "transparent")};
+}
+
+& input:focus {
+  outline: none;
+  background: #fad0ec;
+  border-color: #8b005d;
+}
+`;
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -24,10 +59,10 @@ const CourseInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`form-control ${!isValidValue ? "invalid" : ""}`}>
+      <FormControl isValid={!isValidValue}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
-      </div>
+      </FormControl>
       <Button type="submit">Add Goal</Button>
     </form>
   );
