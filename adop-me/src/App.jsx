@@ -4,44 +4,45 @@
 // this make Reac component easy to test and fix bugs. since if something goes wromc
 // with data you know where this data came from.
 
-import React from "react";
 import { createRoot } from "react-dom/client";
+import Pet from "./Pet"
 
-const pet = (props) => {
-    return React.createElement("div", {}, [
-        React.createElement("h1", {}, props.name),
-        React.createElement("h2", {}, props.animal),
-        React.createElement("h2", {}, props.breed),
 
-    ]);
-};
+// const App = () =>{
+//     return React.createElement( 
+//         "div",
+//         {},
+//         [
+//             React.createElement("h1", {}, "Adopt me"),
+//             React.createElement(Pet, {
+//                 name: "Luna",
+//                 animal: "Dog",
+//                 breed: "Havanese"
+//             }),
+//             React.createElement(Pet, {
+//                 name: "pepper",
+//                 animal: "Bird",
+//                 breed: "Kakatail"
+//             }),
+//             React.createElement(Pet, {
+//                 name: "Koin",
+//                 animal: "Cat",
+//                 breed: "Mixed"
+//             })]
+//     );
+//    };
 
 
 const App = () =>{
-    return React.createElement( 
-        "div",
-        {},
-        [
-            React.createElement("h1", {}, "Adopt me"),
-            React.createElement(pet, {
-                name: "Luna",
-                animal: "Dog",
-                breed: "Havanese"
-            }),
-            React.createElement(pet, {
-                name: "pepper",
-                animal: "Bird",
-                breed: "Kakatail"
-            }),
-            React.createElement(pet, {
-                name: "Koin",
-                animal: "Cat",
-                breed: "Mixed"
-            })]
-    );
-   };
-
+    return (
+        <div>
+            <h1>Adopt Me!</h1>
+            <Pet animal= "Dog" name="Luna" breed="Havanese" />
+            <Pet animal= "Bird" name="Pepper" breed="Kackatiel" />
+            <Pet animal= "Cat" name="Doink" breed="Mixed" />
+        </div>
+)};
    
    const container = document.getElementById("root");
    const root = createRoot(container);
-   root.render(React.createElement(App));
+   root.render(<App />);

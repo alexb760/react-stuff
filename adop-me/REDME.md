@@ -1,6 +1,7 @@
 # Simple Read App.
 
-## Course from FrontEnd-master.
+## Course from FrontEnd-master. 
+[React note course](https://react-v8.holt.courses/)
 
 ## Setting up the project:
 
@@ -22,3 +23,20 @@ npm i -D eslint@8.24.0 eslint-config-prettier@8.5.0
 ```
 Note: Creates a `.eslintrc.json` file.
  debugin in slint `npm run eslint -- --debug` the `--` means pass the debug to the underline command. 
+
+```shell
+#install vite
+npm npm i -D vite@3.1.4 @vitejs/pluigin-react@2.1.0 
+``` 
+vite is a build tols will help to deploy localy or build a production app.
+note: make sure to create a `vite.config.js` to configure our build tool.
+```shell
+#run app local
+npm npm run dev
+# or
+npm vite 
+``` 
+
+## Configuring JSX and moving old js to JSX
+pay attentions at the chages made in `.eslintrc.json`
+notes: [Conf JSX](https://react-v8.holt.courses/)
