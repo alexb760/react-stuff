@@ -2,7 +2,7 @@ import { useState } from "react";
 const ANIMALS = ["bird", "dog", "cat", "reptail"];
 
 const SearchParam = () => {
-  const [localtion, setLocation] = useState("");
+  const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const breds = [];
@@ -16,7 +16,7 @@ const SearchParam = () => {
             onChange={(e) => setLocation(e.target.value)}
             id="locatin"
             value={location}
-            placeholder="location"
+            placeholder="Location"
           ></input>
         </label>
         <label htmlFor="Anilam">
@@ -36,7 +36,6 @@ const SearchParam = () => {
             <option />
             {ANIMALS.map((animal) => (
               <option key={animal} value={animal}>
-                {" "}
                 {animal}
               </option>
             ))}
@@ -54,7 +53,7 @@ const SearchParam = () => {
               setBreed(e.target.value);
             }}
             id="breed"
-            value={animal}
+            value={breed}
           >
             <option />
             {breds.map((breed) => (
