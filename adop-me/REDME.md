@@ -85,3 +85,12 @@ const myComponente = () =>{
    //...
 }
 ``` 
+## Component composition:
+Some time is worthy to extract functions to a separated component:
+When:
+* When it can be reusable.
+* When it isolated logic as a single responsibility principle.
+Why.
+* Makes easy testable components.
+* Makes readable and understandable components.
+[Component composition lesson](https://react-v8.holt.courses/lessons/core-react-concepts/component-composition)
