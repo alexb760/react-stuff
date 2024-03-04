@@ -5,12 +5,11 @@
 // with data you know where this data came from.
 
 import { createRoot } from "react-dom/client";
-import Pet from "./Pet"
+import Pet from "./Pet";
 import SearchParam from "./SearchParam";
 
-
 // const App = () =>{
-//     return React.createElement( 
+//     return React.createElement(
 //         "div",
 //         {},
 //         [
@@ -33,7 +32,6 @@ import SearchParam from "./SearchParam";
 //     );
 //    };
 
-
 // const App = () =>{
 //     return (
 //         <div>
@@ -46,14 +44,15 @@ import SearchParam from "./SearchParam";
 
 //Using a component with Hooks.
 
-const App = () =>{
-    return (
-        <div>
-            <h1>Adopt Me!</h1>
-            <SearchParam />
-        </div>
-)};
-   
-   const container = document.getElementById("root");
-   const root = createRoot(container);
-   root.render(<App />);
+const App = () => {
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParam />
+    </div>
+  );
+};
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
