@@ -94,3 +94,5 @@ Why.
 * Makes easy testable components.
 * Makes readable and understandable components.
 [Component composition lesson](https://react-v8.holt.courses/lessons/core-react-concepts/component-composition)
+### Styling Pet component.
+ Applying CSS styles to the Pet component.
