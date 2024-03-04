@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Pet from "./Pet";
+import useBreedList from "./useBreedList";
 
 const ANIMALS = ["bird", "dog", "cat", "reptail"];
 
@@ -8,7 +9,7 @@ const SearchParam = () => {
   const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
-  const breds = [];
+  const [breeds] = useBreedList(animal);
 
   // 1. By default Efects will load each time the componen is re render
   //    to change this behaviurs we can use and aditional parameter where we can set de dependecies.
@@ -69,7 +70,7 @@ const SearchParam = () => {
         <label htmlFor="Breed">
           Breed
           <select
-            disabled={!breds.length === 0}
+            disabled={!breeds.length}
             onChange={(e) => {
               setBreed(e.target.value);
             }}
@@ -80,7 +81,7 @@ const SearchParam = () => {
             value={breed}
           >
             <option />
-            {breds.map((breed) => (
+            {breeds.map((breed) => (
               <option key={breed} value={breed}>
                 {breed}
               </option>
