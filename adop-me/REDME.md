@@ -40,3 +40,7 @@ npm vite
 ## Configuring JSX and moving old js to JSX
 pay attentions at the chages made in `.eslintrc.json`
 notes: [Conf JSX](https://react-v8.holt.courses/)
+
+## Hooks:
+link: [Hooks lesson:](https://react-v8.holt.courses/lessons/core-react-concepts/hooks)
+In a nutshell, hooks are able to update inputs inside its component.

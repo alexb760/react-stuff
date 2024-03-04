@@ -6,6 +6,7 @@
 
 import { createRoot } from "react-dom/client";
 import Pet from "./Pet"
+import SearchParam from "./SearchParam";
 
 
 // const App = () =>{
@@ -33,13 +34,23 @@ import Pet from "./Pet"
 //    };
 
 
+// const App = () =>{
+//     return (
+//         <div>
+//             <h1>Adopt Me!</h1>
+//             <Pet animal= "Dog" name="Luna" breed="Havanese" />
+//             <Pet animal= "Bird" name="Pepper" breed="Kackatiel" />
+//             <Pet animal= "Cat" name="Doink" breed="Mixed" />
+//         </div>
+// )};
+
+//Using a component with Hooks.
+
 const App = () =>{
     return (
         <div>
             <h1>Adopt Me!</h1>
-            <Pet animal= "Dog" name="Luna" breed="Havanese" />
-            <Pet animal= "Bird" name="Pepper" breed="Kackatiel" />
-            <Pet animal= "Cat" name="Doink" breed="Mixed" />
+            <SearchParam />
         </div>
 )};
    
