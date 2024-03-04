@@ -5,7 +5,7 @@
 // with data you know where this data came from.
 
 import { createRoot } from "react-dom/client";
-import Pet from "./Pet";
+// import Pet from "./Pet";
 import SearchParam from "./SearchParam";
 
 // const App = () =>{
