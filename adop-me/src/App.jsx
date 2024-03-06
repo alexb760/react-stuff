@@ -7,6 +7,8 @@
 import { createRoot } from "react-dom/client";
 // import Pet from "./Pet";
 import SearchParam from "./SearchParam";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Details from "./Details";
 
 // const App = () =>{
 //     return React.createElement(
@@ -44,12 +46,25 @@ import SearchParam from "./SearchParam";
 
 //Using a component with Hooks.
 
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Adopt Me!</h1>
+//       <SearchParam />
+//     </div>
+//   );
+// };
+
+// Using Routers. it will allow to open diferent pages as it still is a single page.
 const App = () => {
   return (
-    <div>
-      <h1>Adopt Me!</h1>
-      <SearchParam />
-    </div>
+    <BrowserRouter>
+      <h1>Adopt me! V1</h1>
+      <Routes>
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/" element={<SearchParam />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

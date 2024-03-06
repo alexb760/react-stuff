@@ -1,4 +1,4 @@
-// import React from "react";
+import { Link } from "react-router-dom";
 
 // const Pet = (props) => {
 //     return React.createElement("div", {}, [
@@ -17,8 +17,11 @@ const Pet = (props) => {
     hero = images[0];
   }
 
+  // We will change <a /> HTML tag to < Link/> from reeact-router-dom:
+  // Why? HTML tag will reload the entired page all over again on each click. 
+  // In contras Link will works as an interceptor just to handle the clint-side.
   return (
-    <a href={`/details/${id}`} className="pet">
+    <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
         <img src={hero} alt={name} />
       </div>
@@ -26,7 +29,7 @@ const Pet = (props) => {
         <h1>{name}</h1>
         <h2>{`${animal} - ${breed} - ${location}`}</h2>
       </div>
-    </a>
+    </Link>
   );
 };
 

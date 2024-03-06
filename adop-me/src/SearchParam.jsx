@@ -1,7 +1,6 @@
 import FormSearchComponent from "./FormSearchComponent";
 
 const SearchParam = () => {
-
   return (
     <div>
       <FormSearchComponent />

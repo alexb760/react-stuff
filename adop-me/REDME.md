@@ -96,3 +96,6 @@ Why.
 [Component composition lesson](https://react-v8.holt.courses/lessons/core-react-concepts/component-composition)
 ### Styling Pet component.
  Applying CSS styles to the Pet component.
+## Router.
+Open capabilities of navigation between pages. So that we can have multiples pages in the same app.
+An additional npm dependency is needed. ``npm install react-router-dom@6.4.1 ``

@@ -17,6 +17,7 @@ const FormSearchComponent = () => {
   //  [location, animal, breed] means fetch any time the dependencies changes.
   useEffect(() => {
     requestPets();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function requestPets() {
