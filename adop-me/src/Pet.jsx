@@ -18,7 +18,7 @@ const Pet = (props) => {
   }
 
   // We will change <a /> HTML tag to < Link/> from reeact-router-dom:
-  // Why? HTML tag will reload the entired page all over again on each click. 
+  // Why? HTML tag will reload the entired page all over again on each click.
   // In contras Link will works as an interceptor just to handle the clint-side.
   return (
     <Link to={`/details/${id}`} className="pet">

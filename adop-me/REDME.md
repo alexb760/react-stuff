@@ -15,7 +15,7 @@ npm init -y
 # install the specific prettier version.
 npm install --save-dev prettier@2.7.1
 ```
-note: is needed to create a `.pretierrc` file in the command so that vs will know there is a prettier config.
+Note: is needed to create a `.pretierrc` file in the command so that vs will know there is a prettier config.
 
 ```shell
 #install eslint
@@ -99,3 +99,6 @@ Why.
 ## Router.
 Open capabilities of navigation between pages. So that we can have multiples pages in the same app.
 An additional npm dependency is needed. ``npm install react-router-dom@6.4.1 ``
+### useParams.
+React-route-dom provide a simple way to take out props from the context. BrowserRoute provide a context where all
+variables we sent to the children page can be managed by ``useParams()``
