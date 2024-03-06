@@ -102,3 +102,14 @@ An additional npm dependency is needed. ``npm install react-router-dom@6.4.1 ``
 ### useParams.
 React-route-dom provide a simple way to take out props from the context. BrowserRoute provide a context where all
 variables we sent to the children page can be managed by ``useParams()``
+## react-query
+[react-query lesson](https://react-v8.holt.courses/lessons/react-capabilities/react-query)
+React Query do a cache for any fetch operation so that it will not do a request to the API.
+```javascript
+// inside <BrowserRouter> wrapping everything inside it
+<QueryClientProvider client={queryClient}>
+ […]
+</QueryClientProvider>
+```
+And creates the fetch thing handler.
+
