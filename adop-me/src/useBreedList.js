@@ -3,13 +3,11 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchBreeList from "./fetchBreedList";
 
-export default function useBreedList ( animal ) {
+export default function useBreedList(animal) {
   const result = useQuery(["breed", animal], fetchBreeList);
   //new ternary condition in JS
   return [result?.data?.breeds ?? [], result.status];
 }
-
-
 
 // import { useState, useEffect } from "react";
 

@@ -10,16 +10,15 @@ const FormSearchComponent = () => {
   const [requestParams, setRequestParams] = useState({
     location: "",
     animal: "",
-    breed: ""
+    breed: "",
   });
   //const [pets, setPets] = useState([]);
   //const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breeds] = useBreedList(animal);
 
-  const result = useQuery([ "search", requestParams ], fetchSearch);
+  const result = useQuery(["search", requestParams], fetchSearch);
   const pets = result?.data?.pets ?? [];
-
 
   // 1. By default Efects will load each time the componen is re render
   //    to change this behaviurs we can use and aditional parameter where we can set de dependecies.
@@ -46,19 +45,16 @@ const FormSearchComponent = () => {
           //Browser API
           const formData = new FormData(e.target);
           const obj = {
-            animal : formData.get("animal") ?? "",
-            location : formData.get("location") ?? "",
-            breed : formData.get("breed") ?? "",
+            animal: formData.get("animal") ?? "",
+            location: formData.get("location") ?? "",
+            breed: formData.get("breed") ?? "",
           };
           setRequestParams(obj);
         }}
       >
         <label htmlFor="location">
           Location
-          <input
-          name="location"
-            id="location"
-            placeholder="Location" />
+          <input name="location" id="location" placeholder="Location" />
         </label>
         <label htmlFor="Animal">
           Animal
@@ -83,11 +79,7 @@ const FormSearchComponent = () => {
 
         <label htmlFor="Breed">
           Breed
-          <select
-          name="breed"
-            disabled={!breeds.length}
-            id="breed"
-          >
+          <select name="breed" disabled={!breeds.length} id="breed">
             <option />
             {breeds.map((breed) => (
               <option key={breed} value={breed}>
