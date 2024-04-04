@@ -143,3 +143,9 @@ Class component does not support hooks.
 If you need to use something like hooks or similar needs to create a special function
 [class component](https://react-v8.holt.courses/lessons/react-capabilities/class-components)
 [git](https://github.com/btholt/citr-v8-project/tree/master/10-uncontrolled-forms)
+
+## Error Boundary.
+
+How react handles errors, a class component is needed. Also implement a method `getDerivedStateFromError()`
+[Error-Boundary](https://react-v8.holt.courses/lessons/special-case-react-tools/error-boundaries)
+[React documentation](reactjs.org/docs/error-boundaries.html)
