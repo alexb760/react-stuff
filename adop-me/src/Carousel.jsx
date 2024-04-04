@@ -19,6 +19,7 @@ class Carousel extends Component {
   };
 
   render() {
+    //throw new Error('Hulk smash!'); // testing ErrorBoundary class
     const { active } = this.state;
     const { images } = this.props;
 
